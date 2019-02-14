@@ -1,0 +1,16 @@
+server:
+  host: smtp.gmail.com
+  port: 587
+  username: your_email@example.com
+  password: randompassword
+data:
+  contacts: contacts.csv
+  template: template.html
+email-data:
+  from: your_email@example.com
+  cc: your_email@example.com
+  subject: Hello, World!
+  attachments:
+    - file1.txt
+    - file2.txt
+    - file3.txt
