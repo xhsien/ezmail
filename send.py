@@ -73,12 +73,12 @@ if __name__ == '__main__':
     with open(sys.argv[1]) as stream:    
         config = yaml.load(stream)
 
+    template = read_template(config['data']['template'])
+    contacts = read_contacts(config['data']['contacts'])
+
     print("Logging into mailing server...")
     start_server(config['server'])
     print("Login successful!")
-
-    template = read_template(config['data']['template'])
-    contacts = read_contacts(config['data']['contacts'])
 
     pool = Pool(cpu_count())
     results = pool.starmap(send_email, zip(contacts, itertools.repeat(template), itertools.repeat(config)))
