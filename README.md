@@ -44,6 +44,8 @@ bob,bob@example.com,Silver
 
 The `name` and `medal` column will be substituted into the HTML placeholder.
 
+**Important**: Header must contain an `email` column.
+
 ### YAML File
 
 ```
@@ -64,3 +66,8 @@ email-data:
     - file2.txt
     - file3.txt
 ```
+
+More on `host`:
+- If you are sending via Gmail, use `smtp.gmail.com`
+- If you are sending via Office365, use `smtp.office365.com`
+- If you are sending via Zoho, use `smtp.zoho.com`
